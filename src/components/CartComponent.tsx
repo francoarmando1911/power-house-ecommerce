@@ -1,5 +1,5 @@
 import React from 'react';
-import type { CartProps } from '../types/types'; // Asegúrate de que esta ruta sea correcta
+import type { CartProps } from '../types/types'; 
 
 const CartComponent: React.FC<CartProps> = ({
     cart,

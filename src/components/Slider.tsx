@@ -79,10 +79,10 @@ const Slider: React.FC = () => {
 
     return (
         <>
-            <main className="pt-12"> {/* Agregamos un padding-top de 12 para separar del header */}
+            <main className="pt-12"> 
                 <div className="relative w-full max-w-5xl mx-auto overflow-hidden rounded-lg shadow-lg">
                     <div
-                        className="relative h-64 sm:h-80 md:h-96" // Cambié la altura para ser responsiva
+                        className="relative h-64 sm:h-80 md:h-96" 
                         onMouseEnter={handleMouseEnter}
                         onMouseLeave={handleMouseLeave}
                         role="region"

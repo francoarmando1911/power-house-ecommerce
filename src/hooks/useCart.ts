@@ -2,7 +2,6 @@ import { useState, useEffect, useMemo } from 'react';
 import { products } from '../data/db'; 
 import type { Product, CartItem, ProductID } from '../types/types';
 
-// Definición de la función initialCart
 const initialCart = (): CartItem[] => {
     const localStorageCart = localStorage.getItem('cart');
     return localStorageCart ? JSON.parse(localStorageCart) : [];
@@ -17,22 +16,20 @@ export const useCart = (type: string) => {
         console.log("Filtered products for type", type, filteredProducts);
     }, [type]);
 
-    const [cart, setCart] = useState<CartItem[]>(initialCart); // Usamos initialCart aquí para inicializar el estado
+    const [cart, setCart] = useState<CartItem[]>(initialCart); 
 
     const MAX_ITEMS = 5;
     const MIN_ITEMS = 1;
 
-    // Actualiza el carrito en local storage cuando cambia
     useEffect(() => {
         localStorage.setItem('cart', JSON.stringify(cart));
     }, [cart]);
 
-    // Agregar al carrito
     function addToCart(item: Product) {
         const itemExist = cart.findIndex((product) => product.id === item.id);
 
-        if (itemExist >= 0) { // Existe en el carrito
-            if (cart[itemExist].quantity >= MAX_ITEMS) return; // No se permite agregar más
+        if (itemExist >= 0) { 
+            if (cart[itemExist].quantity >= MAX_ITEMS) return; 
             const updatedCart = cart.map((product, index) =>
                 index === itemExist
                     ? { ...product, quantity: product.quantity + 1 }
@@ -79,7 +76,6 @@ export const useCart = (type: string) => {
         setCart([]);
     }
 
-    // State derivado
     const isEmpty = useMemo(() => cart.length === 0, [cart]);
     const cartTotal = useMemo(() => cart.reduce((total, item) => total + item.quantity * item.price, 0), [cart]);
 

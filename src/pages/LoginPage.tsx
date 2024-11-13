@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom'; // Asegúrate de tener React Router configurado
+import { Link } from 'react-router-dom'; 
 
 const LoginPage: React.FC = () => {
     const [email, setEmail] = useState<string>('');

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom'; // Asegúrate de tener React Router configurado
+import { Link } from 'react-router-dom'; 
 
 const Register: React.FC = () => {
     const [email, setEmail] = useState<string>('');
@@ -16,7 +16,7 @@ const Register: React.FC = () => {
         }
 
         console.log('Registrarse con:', { email, username, password });
-        // Aquí puedes manejar la lógica de registro
+        
     };
 
     return (

@@ -23,12 +23,12 @@ const Header: React.FC<HeaderProps> = ({
                         <img
                             src="/logo.png"
                             alt="Logo"
-                            className="h-12 w-auto sm:h-16" // Escalable según el tamaño de la pantalla
+                            className="h-12 w-auto sm:h-16" 
                         />
                     </Link>
                 </div>
 
-                {/* Barra de búsqueda (visible siempre) */}
+                {/* Barra de búsqueda */}
                 <div className="flex-1 mx-4">
                     <input
                         type="text"
@@ -39,7 +39,7 @@ const Header: React.FC<HeaderProps> = ({
 
                 {/* Menú y botones */}
                 <div className="flex items-center space-x-2 md:space-x-4">
-                    {/* Botón de categorías (visible siempre) */}
+                    {/* Botón de categorías */}
                     <button
                         onClick={toggleMenu}
                         className="bg-white text-orange-700 px-4 py-2 rounded-full font-semibold hover:bg-purple-100 transition duration-300 flex items-center"
@@ -47,7 +47,7 @@ const Header: React.FC<HeaderProps> = ({
                         <FaBars className="inline-block mr-2" /> Categorías
                     </button>
 
-                    {/* Botón Ingresar (visible en dispositivos mayores) */}
+                    {/* Botón Ingresar  */}
                     <button
                         onClick={() => navigate('/pages/login')}
                         className="hidden sm:flex bg-white text-orange-700 px-4 py-2 rounded-full font-semibold hover:bg-purple-100 transition duration-300 items-center"

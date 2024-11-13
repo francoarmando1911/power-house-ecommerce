@@ -6,7 +6,6 @@ const Home: React.FC = () => {
         <div className="flex flex-col items-center space-y-8 p-6">
             <h1 className="text-3xl font-bold text-center md:text-4xl">Bienvenido a nuestra tienda</h1>
 
-            {/* Contenedor para los boxes principales */}
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 w-full max-w-5xl">
                 {/* Box 1 */}
                 <Link to="/productos" aria-label="Ver productos" className="p-6 bg-blue-500 text-white text-center rounded-lg shadow-lg hover:bg-blue-600 hover:scale-105 transition transform duration-200 ease-in-out">
@@ -27,7 +26,6 @@ const Home: React.FC = () => {
                 </Link>
             </div>
 
-            {/* Contenedor de categorías con scroll horizontal */}
             <div className="w-full max-w-5xl overflow-x-auto p-4">
                 <div className="flex space-x-4">
 

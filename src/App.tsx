@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Routes, Route, useLocation } from 'react-router-dom'; // Importa useLocation
+import { Routes, Route, useLocation } from 'react-router-dom'; 
 import { useCart } from './hooks/useCart';
 import './index.css';
 import Header from './components/Header';
@@ -14,7 +14,7 @@ import { Product } from './types/types';
 const App: React.FC = () => {
   const { cart, addToCart, removeFromCart, increaseQuantity, decreaseQuantity, clearCart, isEmpty, cartTotal } = useCart('productos');
   const [showCart, setShowCart] = useState(false);
-  const location = useLocation(); // Usa el hook useLocation
+  const location = useLocation(); 
 
   const toggleCart = () => {
     setShowCart(prev => !prev);
@@ -39,7 +39,7 @@ const App: React.FC = () => {
         toggleCart={toggleCart}
       />
 
-      {showCart && !isAuthPage && ( // Condicional para mostrar el carrito
+      {showCart && !isAuthPage && ( 
         <CartComponent
           cart={cart}
           removeFromCart={removeFromCart}
@@ -51,7 +51,7 @@ const App: React.FC = () => {
         />
       )}
 
-      {!isAuthPage &&  <Slider />} {/* Condicional para mostrar el slider */}
+      {!isAuthPage &&  <Slider />} 
 
       <button
         onClick={() => addToCart(sampleProduct)}
